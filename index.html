@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monochromality Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body, html {
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background-color: #111;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ccc;
+    }
+
+    section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background-image: url('poolsbgnd.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 2s ease;
+    }
+
+    .logo {
+      max-width: 400px;
+      width: 90%;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 10px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    .section-dark {
+      background-color: #1a1a1a;
+    }
+
+    .section-light {
+      background-color: #222;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .trailer iframe {
+      width: 100%;
+      max-width: 720px;
+      height: 405px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .contact-box {
+      background-color: #2a2a2a;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 40px auto 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input,
+    form textarea {
+      padding: 12px;
+      background-color: #1a1a1a;
+      border: 1px solid #444;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+
+    form input::placeholder,
+    form textarea::placeholder {
+      color: #bbb;
+    }
+
+    form input[type="submit"] {
+      background-color: #fff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #ddd;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div><strong>Monochromality</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#trailer">Trailer</a>
+      <a href="#made-by">Made By</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <img src="monologo.png" alt="Game Logo" class="logo">
+      <p class="tagline">A Psychological Horror Experience</p>
+      <a href="#about" class="btn">Learn More</a>
+      <a href="https://discord.gg/MjgVCMUQKR" class="btn" target="_blank">Join Discord</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section-dark fade-in" id="about">
+    <h2>About the Game</h2>
+    <p>This surreal horror experience plunges you into eerie, liminal environments where your past haunts your every step. Solve mysteries, uncover memories, and escape the unknown.</p>
+  </section>
+
+  <!-- Trailer -->
+  <section class="section-light fade-in" id="trailer">
+    <h2>Watch the Trailer</h2>
+    <div class="trailer">
+      <iframe src="https://www.youtube.com/embed/YOUR_TRAILER_ID" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Made By -->
+  <section class="section-dark fade-in" id="made-by">
+    <h2>Made By</h2>
+    <p>Crafted by [Your Name or Studio Name], this project was born from a love of atmospheric exploration and unsettling storytelling, using Unreal Engine as its foundation.</p>
+  </section>
+
+  <!-- Contact -->
+  <section class="section-dark fade-in" id="contact">
+    <h2>Get In Touch</h2>
+    <p>If you have questions, ideas, or just want to say hi, drop a message. We're listening.</p>
+    <div class="contact-box">
+      <form action="https://formsubmit.co/nullconceptdevs@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+  </section>
+
+  <!-- Scroll Fade-In Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
