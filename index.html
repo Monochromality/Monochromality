@@ -189,6 +189,41 @@
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .team-member {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 200px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .team-member h3 {
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+
+    .team-member p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
@@ -200,6 +235,7 @@
       <a href="#about">About</a>
       <a href="#trailer">Trailer</a>
       <a href="#made-by">Made By</a>
+      <a href="#team">Team</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -234,6 +270,37 @@ Only God can save you now.</p>
   <section class="section-dark fade-in" id="made-by">
     <h2>Made By</h2>
     <p>Made by Null Concept, this project is in the works to become our biggest game ever!</p>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section-light fade-in" id="team">
+    <h2>Meet the Team</h2>
+
+    <h3 style="margin-top: 40px;">Founders</h3>
+    <div class="team-grid">
+      <div class="team-member"><img src="team1.png" alt="Founder 1"><h3>Alex R.</h3><p>Lead Developer</p></div>
+      <div class="team-member"><img src="team2.png" alt="Founder 2"><h3>Jamie L.</h3><p>Creative Director</p></div>
+      <div class="team-member"><img src="team3.png" alt="Founder 3"><h3>Morgan V.</h3><p>Project Manager</p></div>
+      <div class="team-member"><img src="team4.png" alt="Founder 4"><h3>Chris K.</h3><p>Technical Lead</p></div>
+    </div>
+
+    <h3 style="margin-top: 60px;">Team Members</h3>
+    <div class="team-grid">
+      <div class="team-member"><img src="team5.png" alt="Team Member 1"><h3>Sam T.</h3><p>Environment Artist</p></div>
+      <div class="team-member"><img src="team6.png" alt="Team Member 2"><h3>Lena M.</h3><p>Level Designer</p></div>
+      <div class="team-member"><img src="team7.png" alt="Team Member 3"><h3>Ty B.</h3><p>Sound Designer</p></div>
+      <div class="team-member"><img src="team8.png" alt="Team Member 4"><h3>Kay D.</h3><p>3D Modeler</p></div>
+      <div class="team-member"><img src="team9.png" alt="Team Member 5"><h3>Arin Z.</h3><p>UI/UX Designer</p></div>
+      <div class="team-member"><img src="team10.png" alt="Team Member 6"><h3>Felix N.</h3><p>Animator</p></div>
+      <div class="team-member"><img src="team11.png" alt="Team Member 7"><h3>Ivy W.</h3><p>QA Tester</p></div>
+    </div>
+
+    <h3 style="margin-top: 60px;">Voice Actors</h3>
+    <div class="team-grid">
+      <div class="team-member"><img src="team12.png" alt="Voice Actor 1"><h3>Zoey H.</h3><p>Voice Actor</p></div>
+      <div class="team-member"><img src="team13.png" alt="Voice Actor 2"><h3>Nate P.</h3><p>Voice Actor</p></div>
+      <div class="team-member"><img src="team14.png" alt="Voice Actor 3"><h3>Elena S.</h3><p>Voice Actor</p></div>
+    </div>
   </section>
 
   <!-- Contact -->
